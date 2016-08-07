@@ -1,0 +1,20 @@
+{
+  "modListVersion": 2,
+  "modList": [{
+    "modid": "juststone",
+    "name": "Just Stone",
+    "description": "A world full of stone.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "http://www.minecraftforum.net/topic/1241861-",
+    "updateUrl": "",
+    "authorList": ["Two"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "requiredMods":[],
+    "dependencies": [],
+    "dependants": [],
+    "useDependencyInformation": true
+  }]
+}
