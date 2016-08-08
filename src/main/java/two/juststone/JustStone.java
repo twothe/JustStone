@@ -3,11 +3,11 @@
  */
 package two.juststone;
 
+import two.juststone.worldgen.JustStoneWorldProvider;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraft.world.WorldType;
 import net.minecraftforge.common.DimensionManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,7 +24,7 @@ public class JustStone {
 
   public static final String MOD_NAME = "Just Stone";
   public static final String MOD_ID = "juststone";
-  public static final String MOD_VERSION = "1710.1.0";
+  public static final String MOD_VERSION = "1710.1.2";
   /* Global logger that uses string format type logging */
   public static final Logger log = LogManager.getLogger(JustStone.class.getSimpleName(), new StringFormatterMessageFactory());
 
@@ -37,6 +37,7 @@ public class JustStone {
   public static boolean generateCaves = true;
   public static boolean generateRavines = true;
   public static boolean generateMines = true;
+  public static boolean generateDecorate = true;
   public static int groundLevel = 255;
   public static ISpawnGenerator spawnGenerator;
 
@@ -65,6 +66,7 @@ public class JustStone {
     JustStone.generateCaves = config.getMiscBoolean("Generate caves", true, "Whether or not to generate caves.");
     JustStone.generateRavines = config.getMiscBoolean("Generate ravines", true, "Whether or not to generate ravines.");
     JustStone.generateMines = config.getMiscBoolean("Generate mines", true, "Whether or not to generate mines.");
+    JustStone.generateDecorate = config.getMiscBoolean("Decorate Chunks", true, "Whether or not to generate flora and (vanilla) ores.");
 
     switch (config.getMiscInteger("Spawn Type", 0, "Type of spawn point to generate.\n  0 - (default) 7x7x7 area with tree, grass and torches.")) {
       case 0:

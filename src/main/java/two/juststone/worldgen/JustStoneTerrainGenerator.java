@@ -208,6 +208,9 @@ public class JustStoneTerrainGenerator implements IChunkProvider {
       }
     }
 
+    if (JustStone.generateDecorate) {
+      biomegenbase.decorate(this.worldObj, this.seedRandom, blockX, blockZ); // gebnerate flora and ores
+    }
     if (this.baseValues.groundLevel < this.baseValues.worldHeight - 2) {
       SpawnerAnimals.performWorldGenSpawning(this.worldObj, biomegenbase, blockX + 8, blockZ + 8, 16, 16, this.seedRandom);
     }
